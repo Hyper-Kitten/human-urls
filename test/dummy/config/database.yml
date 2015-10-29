@@ -1,0 +1,12 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+
+development:
+  <<: *default
+  database: human_urls_development
+test:
+  <<: *default
+  database: human_urls_test
+
