@@ -11,19 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151029003656) do
+ActiveRecord::Schema.define(version: 20151029012517) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.string   "slug"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "posts", ["slug"], name: "index_posts_on_slug", unique: true, using: :btree
 
   create_table "taggable_w_generated_slugs", force: :cascade do |t|
     t.string   "title"
@@ -33,5 +24,14 @@ ActiveRecord::Schema.define(version: 20151029003656) do
   end
 
   add_index "taggable_w_generated_slugs", ["slug"], name: "index_taggable_w_generated_slugs_on_slug", unique: true, using: :btree
+
+  create_table "taggables", force: :cascade do |t|
+    t.string   "title"
+    t.string   "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "taggables", ["slug"], name: "index_taggables_on_slug", unique: true, using: :btree
 
 end

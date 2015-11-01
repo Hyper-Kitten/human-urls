@@ -1,4 +1,4 @@
-class Post < ActiveRecord::Base
+class Taggable < ActiveRecord::Base
   include HumanUrls::Sluggable
   sluggify
 end
