@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    human_urls (0.0.1)
+    human_urls (0.1.0)
       rails (>= 4.1)
 
 GEM
