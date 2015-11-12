@@ -1,0 +1,8 @@
+Description:
+    Generates a migration that will add a slug column to the given model
+
+Example:
+    rails generate slug_migration Post
+
+    This will create:
+        db/migrate/add_slug_to_posts.rb
