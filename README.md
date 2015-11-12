@@ -10,7 +10,7 @@ Install
 
 Human URLs is a Rails engine tested against Rails >= 4.1 and Ruby >= 2.0.0. To get started, add Human URLs to your Gemfile and bundle install.
 
-`gem 'human_urls`
+`gem 'human_urls'`
 
 Use
 ---
@@ -36,7 +36,7 @@ Alternatively you can just use the generator to do this for you:
 rails generate slug_migration Post
 ```
 
-Once the DB is ready include the HumanUrls::Sluggable module in your model and call the 'sluggify':
+Once the DB is ready, include the HumanUrls::Sluggable module in your model and call the 'sluggify' method:
 
 ```ruby
 class Post < ActiveRecord::Base
@@ -49,7 +49,7 @@ Lastly, you'll just want to make an interface on the view layer so you can creat
 
 ### Auto Slugs
 
-If you choose you can specify a column to generate a slug from:
+If you choose, you can specify a column to generate a slug from:
 
 ```ruby
 class Post < ActiveRecord::Base
