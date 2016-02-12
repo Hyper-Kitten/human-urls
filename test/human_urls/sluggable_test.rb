@@ -50,6 +50,14 @@ class SluggableTest < ActiveSupport::TestCase
     assert_match("my-title", taggable.slug)
   end
 
+  test "slug does not update an existing slug when source field changes" do
+    taggable = TaggableWGeneratedSlug.
+      create!(title: "my-title", slug: "my-old-slug")
+    taggable.update!(title: "Changed Title")
+
+    assert_match("my-old-slug", taggable.slug)
+  end
+
   test "#to_param returns the slug" do
     taggable = Taggable.create!(slug: "slug")
 
