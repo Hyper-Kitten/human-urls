@@ -20,18 +20,6 @@ class SluggableTest < ActiveSupport::TestCase
     assert_match(/Validation failed: Slug can't be blank/, exp.message)
   end
 
-  test "validates unqiueness of slug" do
-    Taggable.create!(slug: "slug")
-    exp = assert_raises { Taggable.create!(slug: "slug") }
-    assert_match(/Slug has already been taken/, exp.message)
-  end
-
-  test "validates unqiueness of slug and isn't case sensitive" do
-    Taggable.create!(slug: "Slug")
-    exp = assert_raises { Taggable.create!(slug: "slug") }
-    assert_match(/Slug has already been taken/, exp.message)
-  end
-
   test "slug properly formats string to slug friendly format" do
     taggable = Taggable.create!(slug: "This i$ my SLUG")
 
