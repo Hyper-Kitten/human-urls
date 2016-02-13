@@ -45,6 +45,12 @@ class Post < ActiveRecord::Base
 end
 ```
 
+Next you'll probably want to make sure you add some validation to make sure slugs are unique:
+
+```ruby
+validates_uniqueness_of slug_param, case_sensitive: false
+```
+
 Lastly, you'll just want to make an interface on the view layer so you can create your slugs.
 
 ### Auto Slugs
