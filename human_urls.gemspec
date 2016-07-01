@@ -18,9 +18,8 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.required_ruby_version = Gem::Requirement.new('>= 2.0.0')
-  s.add_dependency "rails", ">= 4.1"
+  s.add_dependency "rails", ">= 5.0"
 
   s.add_development_dependency "pg"
-  s.add_development_dependency "minitest-rails"
   s.add_development_dependency "pry-rails"
 end

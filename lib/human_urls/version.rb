@@ -1,3 +1,3 @@
 module HumanUrls
-  VERSION = "0.1.3-alpha.0"
+  VERSION = "0.1.4-alpha.0"
 end
