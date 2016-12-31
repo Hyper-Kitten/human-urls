@@ -10,7 +10,7 @@ module HumanUrls
     module ClassMethods
       def sluggify(slug_param=:slug, generated_from: false)
         validates_presence_of slug_param
-        validates_uniqueness_of slug_param
+        validates_uniqueness_of slug_param, case_sensitive: false
         validates_length_of slug_param, maximum: 244
 
         define_method(:to_param) do
