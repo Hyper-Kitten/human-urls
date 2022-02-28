@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  db:
+    image: 'postgres:12-alpine'
+    environment:
+      POSTGRES_USER: human_urls
+      POSTGRES_PASSWORD: password
+    ports:
+      - '5432:5432'
+
+  web:
+    depends_on:
+      - 'db'
+    build: .
+    env_file:
+      - '.env'
+    ports:
+      - '3000:3000'
+    volumes:
+      - '.:/app'
+
