@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = HumanUrls::VERSION
   s.authors     = ["Josh Klina"]
   s.email       = ["joshua.klina@gmail.com"]
-  s.homepage    = "https://github.com/jklina/human-urls"
+  s.homepage    = "https://github.com/Hyper-Kitten/human-urls"
   s.summary     = "A simple way to add slugs to your Rails application"
   s.description = "Human URLs is an intentionally simple and straight forward way to add slugs to a Rails application."
   s.license     = "MIT"
